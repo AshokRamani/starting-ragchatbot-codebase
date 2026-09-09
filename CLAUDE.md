@@ -92,7 +92,9 @@ In-memory only (`dict`, lost on restart). IDs are sequential (`session_1`, ...).
 
 ### Config (`config.py`)
 
-All tunables (model ID `claude-sonnet-4-20250514`, embedding model `all-MiniLM-L6-v2`, chunk sizes, `MAX_RESULTS` 5, `CHROMA_PATH`) live in the `Config` dataclass. Paths in `config.py` and `app.py` are relative and assume the process runs from `backend/`.
+All tunables (model ID `claude-sonnet-5`, embedding model `all-MiniLM-L6-v2`, chunk sizes, `MAX_RESULTS` 5, `CHROMA_PATH`) live in the `Config` dataclass. Paths in `config.py` and `app.py` are relative and assume the process runs from `backend/`.
+
+Note: `ai_generator.py` deliberately omits the `temperature` param — current models (Sonnet 5+) reject it.
 
 ### Frontend (`frontend/`)
 
